@@ -9,7 +9,10 @@ export const metadata: Metadata = {
   title: "BookingPro - Professional Booking Platform",
   description: "Professional booking platform for creative studios and service providers",
   generator: "v0.app",
-}
+  icons : {
+    icon: "/logo.jpg",
+      
+}}
 
 export default function RootLayout({
   children,

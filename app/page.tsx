@@ -406,7 +406,7 @@ const translations = {
 }
 
 export default function LandingPage() {
-  const [language, setLanguage] = useState<"en" | "es">("en")
+  const [language, setLanguage] = useState<"en" | "es">("es")
   const [popupImage, setPopupImage] = useState<{ src: string; alt: string } | null>(null)
   const t = translations[language]
 
