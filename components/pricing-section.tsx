@@ -4,6 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Check } from "lucide-react"
+import Link from "next/link"
 
 interface PricingSectionProps {
   language: "en" | "es"
@@ -120,7 +121,7 @@ export function PricingSection({ language }: PricingSectionProps) {
   const translations = t[language]
 
   return (
-    <section className="py-20 px-4 bg-muted/50">
+    <section className="py-20 px-4 bg-muted/50" id="pricing">
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">{translations.title}</h2>
@@ -174,13 +175,15 @@ export function PricingSection({ language }: PricingSectionProps) {
                 <Check className="w-4 h-4 text-green-500" />
                 <span className="text-sm">{translations.starterFeature4}</span>
               </div>
+              <Link href="#contact">
               <Button
                 className="w-full mt-6 bg-transparent"
                 variant="outline"
-                onClick={() => document.getElementById("contact-form")?.scrollIntoView({ behavior: "smooth" })}
+                
               >
                 {translations.startNow}
               </Button>
+              </Link>
             </CardContent>
           </Card>
 
@@ -214,12 +217,14 @@ export function PricingSection({ language }: PricingSectionProps) {
                 <Check className="w-4 h-4 text-green-500" />
                 <span className="text-sm">{translations.growFeature5}</span>
               </div>
-              <Button
-                className="w-full mt-6"
-                onClick={() => document.getElementById("contact-form")?.scrollIntoView({ behavior: "smooth" })}
-              >
-                {translations.startNow}
-              </Button>
+              <Link href="#contact">
+                <Button
+                  className="w-full mt-6"
+                  
+                  >
+                  {translations.startNow}
+                </Button>
+              </Link>
             </CardContent>
           </Card>
 
@@ -247,6 +252,7 @@ export function PricingSection({ language }: PricingSectionProps) {
                 <Check className="w-4 h-4 text-green-500" />
                 <span className="text-sm">{translations.enterpriseFeature4}</span>
               </div>
+              <Link href="#contact">
               <Button
                 className="w-full mt-6 bg-transparent"
                 variant="outline"
@@ -254,6 +260,7 @@ export function PricingSection({ language }: PricingSectionProps) {
               >
                 {translations.startNow}
               </Button>
+              </Link>
             </CardContent>
           </Card>
 
@@ -271,9 +278,11 @@ export function PricingSection({ language }: PricingSectionProps) {
                   <p>{translations.apiCost}</p>
                 </div>
               </div>
+              
               <Button variant="link" className="text-orange-600 p-0 h-auto text-xs mt-2">
                 {translations.seeCalculator}
               </Button>
+              
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="flex items-center space-x-2">
@@ -300,12 +309,14 @@ export function PricingSection({ language }: PricingSectionProps) {
                 <Check className="w-4 h-4 text-green-500" />
                 <span className="text-sm">{translations.whatsappFeature6}</span>
               </div>
+              <Link href="#contact">
               <Button
                 className="w-full mt-6 bg-orange-600 hover:bg-orange-700"
-                onClick={() => document.getElementById("contact-form")?.scrollIntoView({ behavior: "smooth" })}
+               
               >
                 {translations.startNow}
               </Button>
+              </Link>
             </CardContent>
           </Card>
         </div>

@@ -25,6 +25,7 @@ import {
   Smartphone,
   Search,
 } from "lucide-react"
+import Link from "next/link"
 
 const translations = {
   en: {
@@ -415,7 +416,7 @@ export default function LandingPage() {
       contactForm.scrollIntoView({ behavior: "smooth" })
     }
   }
-
+  
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
@@ -437,9 +438,9 @@ export default function LandingPage() {
             <a href="#pricing" className="text-muted-foreground hover:text-foreground">
               {t.pricing}
             </a>
-            <LanguageSwitch currentLanguage={language} onLanguageChange={setLanguage} />
-            <Button>{t.getStarted}</Button>
+            <Link href="#contact"><Button>{t.getStarted}</Button></Link>
           </nav>
+            <LanguageSwitch currentLanguage={language} onLanguageChange={setLanguage} />
         </div>
       </header>
 
@@ -454,17 +455,21 @@ export default function LandingPage() {
           </h1>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">{t.heroSubtitle}</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Button size="lg" className="text-lg px-8" onClick={scrollToContact}>
+            <Link href="#contact">
+            <Button size="lg" className="text-lg px-8" >
               {t.startFreeTrial}
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
+            </Link>
+            <Link href="#contact">
             <Button variant="outline" size="lg" className="text-lg px-8 bg-transparent">
               {t.watchDemo}
             </Button>
+            </Link>
           </div>
 
           {/* Hero Image - INKSTINCT Studio */}
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-4xl mx-auto" id="gallery">
             <img
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/INKSTINCT-NYC-Premier-Tattoo-Studio-08-18-2025_05_11_PM-9I7TXREYpt7XuNAevrS4yrouuGWHt6.png"
               alt="INKSTINCT NYC Premier Tattoo Studio - Professional booking platform showcase"
@@ -474,7 +479,7 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <section className="py-20 px-4 bg-red-50 dark:bg-red-950/20">
+      <section className="py-20 px-4 bg-red-50 dark:bg-red-950/20" >
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-red-700 dark:text-red-400">{t.problemsTitle}</h2>
@@ -1026,7 +1031,7 @@ export default function LandingPage() {
               </div>
               <p className="text-muted-foreground">{t.footerDescription}</p>
             </div>
-            <div>
+            {/* <div>
               <h3 className="font-semibold mb-4">{t.product}</h3>
               <ul className="space-y-2 text-muted-foreground">
                 <li>
@@ -1050,8 +1055,8 @@ export default function LandingPage() {
                   </a>
                 </li>
               </ul>
-            </div>
-            <div>
+            </div> */}
+            {/* <div>
               <h3 className="font-semibold mb-4">{t.support}</h3>
               <ul className="space-y-2 text-muted-foreground">
                 <li>
@@ -1075,8 +1080,8 @@ export default function LandingPage() {
                   </a>
                 </li>
               </ul>
-            </div>
-            <div>
+            </div> */}
+            {/* <div>
               <h3 className="font-semibold mb-4">{t.company}</h3>
               <ul className="space-y-2 text-muted-foreground">
                 <li>
@@ -1100,7 +1105,7 @@ export default function LandingPage() {
                   </a>
                 </li>
               </ul>
-            </div>
+            </div> */}
           </div>
           <div className="border-t mt-8 pt-8 text-center text-muted-foreground">
             <p>&copy; 2024 BookingPro. {t.allRightsReserved}</p>

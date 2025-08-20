@@ -113,7 +113,7 @@ ${formData.message}
   const progress = ((currentStep + 1) / steps.length) * 100
 
   return (
-    <section className="py-20 px-4 bg-gradient-to-br from-primary/5 to-primary/10">
+    <section className="py-20 px-4 bg-gradient-to-br from-primary/5 to-primary/10" id="contact">
       <div className="container mx-auto max-w-2xl">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">{text.title}</h2>

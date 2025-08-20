@@ -4,7 +4,7 @@ import { Globe } from "lucide-react"
 
 interface LanguageSwitchProps {
   currentLanguage: string
-  onLanguageChange: (language: string) => void
+  onLanguageChange: (language: "es" | "en") => void
 }
 
 export function LanguageSwitch({ currentLanguage, onLanguageChange }: LanguageSwitchProps) {
